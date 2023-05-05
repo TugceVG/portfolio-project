@@ -49,12 +49,42 @@
 
             h3 {
                 font-size: 30px;
+
+                span {
+                    font-size: inherit;
+                    color: lightsteelblue;
+                }
+
+                .ityped-cursor {
+                    animation: blink 1s infinite;
+                }
+
+                @keyframes blink {
+                    50%{
+                        opacity: 1;
+                    }
+                    100%{
+                        opacity: 0;
+                    }
+                }
             }
         }
 
         a {
             position: absolute;
             bottom: 10px;
+            // left: 50%; from tutor
+
+            .arrow {
+                // width: 30px;
+                animation: arrowBlink 2s infinite;
+            }
+
+            @keyframes arrowBlink {
+                100%{
+                    opacity: 0;
+                }
+            }
         }
     }
 }
