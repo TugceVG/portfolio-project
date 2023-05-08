@@ -10,11 +10,18 @@ import Works from "./components/works/Works";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const sideBar = [
+    { title: "Home", id: "#intro" },
+    { title: "Portfolio", id: "#portfolio" },
+    { title: "Works", id: "#works" },
+    { title: "Testimonials", id: "#testimonials" },
+    { title: "Contact", id: "#contact" }
+  ]
 
   return (
     <div className="app">
       <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-      <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+      <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} sideBar={sideBar} />
       <div className="sections">
         <Intro />
         <Portfolio />
