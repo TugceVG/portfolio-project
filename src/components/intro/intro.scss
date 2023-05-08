@@ -73,10 +73,10 @@
         a {
             position: absolute;
             bottom: 10px;
-            // left: 50%; from tutor
+            left: 40%;
 
-            .arrow {
-                // width: 30px;
+            img {
+                width: 30px;
                 animation: arrowBlink 2s infinite;
             }
 

@@ -1,5 +1,4 @@
 import "./intro.scss";
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { init } from 'ityped';
 import { useEffect, useRef } from "react";
 
@@ -8,11 +7,11 @@ export default function Intro() {
     const textRef = useRef();
     useEffect(() => {
         init(textRef.current, {
-            showCursor: false,
+            showCursor: true,
             strings: ['JavaScript Developer', 'Front-End Developer'],
             startDelay: 600,
-            backDelay: 2000,
-            backSpeed: 70,
+            backDelay: 1500,
+            backSpeed: 60,
         });
     }, [])
 
@@ -30,7 +29,7 @@ export default function Intro() {
                     <h3>Junior <span ref={textRef}></span></h3>
                 </div>
                 <a href="#portfolio">
-                    <KeyboardArrowDownIcon className="arrow" />
+                    <img src="assets/down.png" alt="" />
                 </a>
             </div>
         </div>
