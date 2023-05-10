@@ -20,8 +20,8 @@ export default function Portfolio() {
             title: "Mobile App"
         },
         {
-            id: "desing",
-            title: "Desing"
+            id: "design",
+            title: "Design"
         },
         {
             id: "branding",
@@ -41,7 +41,7 @@ export default function Portfolio() {
             case "mobile":
                 setData(mobilePortfolio);
                 break;
-            case "desing":
+            case "design":
                 setData(designPortfolio);
                 break;
             case "branding":
