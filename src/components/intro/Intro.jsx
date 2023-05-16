@@ -1,19 +1,24 @@
 import "./intro.scss";
-import { init } from 'ityped';
+import Typed from 'typed.js';
 import { useEffect, useRef } from "react";
 
 export default function Intro() {
 
-    const textRef = useRef();
+    const textRef = useRef(null);
+
     useEffect(() => {
-        init(textRef.current, {
-            showCursor: true,
-            strings: ['JavaScript Developer', 'Front-End Developer'],
-            startDelay: 600,
-            backDelay: 1500,
-            backSpeed: 60,
+        const typed = new Typed(textRef.current, {
+            strings: ['JavaScript Developer', 'ReactJS Developer'],
+            typeSpeed: 70,
+            loop: true,
+            backSpeed: 60
         });
-    }, [])
+
+        return () => {
+            // Destroy Typed instance during cleanup to stop animation
+            typed.destroy();
+        };
+    }, []);
 
     return (
         <div className="intro" id="intro">
