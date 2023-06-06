@@ -10,13 +10,33 @@
         justify-content: space-around;
     }
 
+.testimonialsTitle {
+    // width: 40%;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // position: relative;
+    
     h1{
         font-size: 50px;
-
+    
         @include mobile {
             font-size: 20px;
         }
     }
+    
+    // span {
+    //     font-size: 12px;
+    //     padding: 5px;
+    //     background-color: red;
+    //     border-radius: 10px;
+    //     color: white;
+    //     position: absolute;
+    //     top: 5px;
+    //     right: 30px;
+    // }
+}
+
 
     .container {
         width: 100%;
