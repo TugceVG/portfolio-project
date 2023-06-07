@@ -16,12 +16,12 @@
         align-items: center;
         justify-content: space-between;
 
-        .left{
+        .left {
             display: flex;
             align-items: center;
             justify-content: space-between;
 
-            .logo{
+            .logo {
                 font-size: 40px;
                 font-weight: 700;
                 text-decoration: none;
@@ -29,7 +29,7 @@
                 margin-right: 40px;
             }
 
-            .itemContainer{
+            .itemContainer {
                 display: flex;
                 align-items: center;
                 margin-left: 30px;
@@ -38,15 +38,20 @@
                     display: none;
                 }
 
-                .icon{
-                    font-size: 18px;
+                a:link, a:visited {
+                    text-decoration: none;
+                    color:$mainColor;
+                }
+
+                .icon {
+                    font-size: 25px;
                     margin-right: 5px;
                 }
 
-                span {
-                    font-size: 15px;
-                    font-weight: 500;
-                }
+                // span {
+                //     font-size: 15px;
+                //     font-weight: 500;
+                // }
             }
         }
         

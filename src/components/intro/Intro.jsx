@@ -7,9 +7,6 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 const PF = process.env.REACT_APP_PUBLIC_FOLDER;
 
 export default function Intro() {
-
-    const PF = process.env.REACT_APP_PUBLIC_FOLDER;
-
     const textRef = useRef(null);
 
     useEffect(() => {
@@ -43,14 +40,14 @@ export default function Intro() {
                         <h4>Additionally,</h4>
                         <hr />
                         <div className="detail">
-                            <a href="https://www.linkedin.com/in/tugcevatansevergunduz/" target="_blank">
+                            <a href="https://www.linkedin.com/in/tugcevatansevergunduz/" target="_blank" rel="noreferrer">
                                 <LinkedInIcon className="detailIcon" />
                             </a>
                             <span className="detailText">To reach out to me, you can visit my LinkedIn profile.</span>
                         </div>
 
                         <div className="detail">
-                            <a href="https://github.com/TugceVG" target="_blank">
+                            <a href="https://github.com/TugceVG" target="_blank" rel="noreferrer">
                                 <GitHubIcon className="detailIcon" />
                             </a>
                             <span className="detailText">You can explore my projects and find more details by visiting my GitHub address.</span>

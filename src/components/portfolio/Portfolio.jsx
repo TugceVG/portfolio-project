@@ -4,6 +4,8 @@ import "./portfolio.scss";
 import { featuredPortfolio, webPortfolio, mobilePortfolio, designPortfolio, contentPortfolio } from "../../data";
 
 export default function Portfolio() {
+
+    const PF = process.env.REACT_APP_PUBLIC_FOLDER;
     const [selected, setSelected] = useState("featured");
     const [data, setData] = useState([]);
     const list = [
@@ -70,7 +72,8 @@ export default function Portfolio() {
             <div className="container">
                 {data.map((item) => (
                     <div className="item">
-                        <img src={item.img} alt="" />
+                        {/* <img src={item.img} alt="" /> */}
+                        <img src={PF + "under_construction.png"} alt="" />
                         <h3>{item.title}</h3>
                     </div>))}
             </div>
