@@ -23,12 +23,11 @@ export default function Form({ toggleForm, setShouldUpdate }) {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const { picture, username, userTitle, userCompany, comment } = formRef.current;
+        const { username, userTitle, userCompany, comment } = formRef.current;
         const formData = {
             userName: username.value,
             userTitle: userTitle.value,
             userCompany: userCompany.value,
-            userPicture: picture.value,
             comment: comment.value,
             isVisible: false,
         };
@@ -39,12 +38,13 @@ export default function Form({ toggleForm, setShouldUpdate }) {
             data.append("name", fileName);
             data.append("file", file);
             formData.userPicture = fileName;
+            // console.log("file", file)
 
             try {
                 await fetch("/upload", {
                     method: "POST",
-                    body: JSON.stringify(data),
-                    headers: { 'Content-Type': 'application/json' }
+                    body: data,
+                    // headers: { 'Content-Type': 'multipart/form-data' }
                 });
             } catch (err) {
                 console.log(err);

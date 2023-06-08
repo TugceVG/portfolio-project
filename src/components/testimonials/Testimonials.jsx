@@ -58,7 +58,7 @@ export default function Testimonials() {
                 {isFormVisible
                     ? <Form toggleForm={toggleForm} setShouldUpdate={setShouldUpdate} />
                     : testimonials.filter((testimonial) => testimonial.isVisible).map((testimonial) => (
-                        <div className={testimonial.featured ? "card featured" : "card"}>
+                        <div key={testimonial._id} className={testimonial.featured ? "card featured" : "card"}>
                             <div className="top">
                                 <img src="assets/right-arrow.png" className="left" alt="" />
                                 <img src={PF + testimonial.userPicture} className="user" alt="" />
