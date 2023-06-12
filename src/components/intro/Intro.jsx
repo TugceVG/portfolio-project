@@ -3,6 +3,7 @@ import Typed from 'typed.js';
 import { useEffect, useRef } from "react";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import SimCardDownloadIcon from '@mui/icons-material/SimCardDownload';
 
 const PF = process.env.REACT_APP_PUBLIC_FOLDER;
 
@@ -51,6 +52,10 @@ export default function Intro() {
                                 <GitHubIcon className="detailIcon" />
                             </a>
                             <span className="detailText">You can explore my projects and find more details by visiting my GitHub address.</span>
+                        </div>
+                        <div className="detail">
+                            <a href='assets/TugceVG.pdf' download><SimCardDownloadIcon className="detailIcon">CV</SimCardDownloadIcon></a>
+                            <span className="detailText">Download my CV as PDF</span>
                         </div>
                     </div>
                 </div>
