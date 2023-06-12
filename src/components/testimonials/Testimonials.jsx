@@ -4,7 +4,7 @@ import Form from "../form/Form";
 import "./testimonials.scss";
 
 const PF = process.env.REACT_APP_PUBLIC_FOLDER;
-const BACKEND_URL = process.env.BACKEND_URL || "http://localhost:8800/api"
+const REACT_APP_BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "http://localhost:8800/api"
 const icon = "assets/linkedin.png";
 // const img = "https://images.pexels.com/photos/1680172/pexels-photo-1680172.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500";
 
@@ -20,7 +20,7 @@ export default function Testimonials() {
     useEffect(() => {
         const getAllTestimonials = async () => {
             try {
-                const res = await fetch(BACKEND_URL + "/testimonials/all");
+                const res = await fetch(REACT_APP_BACKEND_URL + "/testimonials/all");
                 const data = await res.json();
 
                 setTestimonials(data);
@@ -36,7 +36,7 @@ export default function Testimonials() {
         if (shouldUpdate) {
             const getAllTestimonials = async () => {
                 try {
-                    const res = await fetch(BACKEND_URL + "/testimonials/all");
+                    const res = await fetch(REACT_APP_BACKEND_URL + "/testimonials/all");
                     const data = await res.json();
 
                     setTestimonials(data);

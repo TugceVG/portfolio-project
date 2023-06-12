@@ -2,7 +2,7 @@ import { useRef, useState } from 'react';
 
 import "./form.scss";
 
-const BACKEND_URL = process.env.BACKEND_URL || "http://localhost:8800/api"
+const REACT_APP_BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "http://localhost:8800/api"
 
 export default function Form({ toggleForm, setShouldUpdate }) {
     const formRef = useRef(null);
@@ -10,7 +10,7 @@ export default function Form({ toggleForm, setShouldUpdate }) {
 
     const saveTestimonial = async (data) => {
         try {
-            await fetch(BACKEND_URL + "/testimonials/add", {
+            await fetch(REACT_APP_BACKEND_URL + "/testimonials/add", {
                 method: "POST",
                 body: JSON.stringify(data),
                 headers: { 'Content-Type': 'application/json' }
@@ -43,7 +43,7 @@ export default function Form({ toggleForm, setShouldUpdate }) {
             // console.log("file", file)
 
             try {
-                await fetch(BACKEND_URL + "/upload", {
+                await fetch(REACT_APP_BACKEND_URL + "/upload", {
                     method: "POST",
                     body: data,
                     // headers: { 'Content-Type': 'multipart/form-data' }
