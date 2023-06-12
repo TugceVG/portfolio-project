@@ -2,13 +2,15 @@ import { useRef, useState } from 'react';
 
 import "./form.scss";
 
+const BACKEND_URL = process.env.BACKEND_URL || "http://localhost:8800/api"
+
 export default function Form({ toggleForm, setShouldUpdate }) {
     const formRef = useRef(null);
     const [file, setFile] = useState(null);
 
     const saveTestimonial = async (data) => {
         try {
-            await fetch("/testimonials/add", {
+            await fetch(BACKEND_URL + "/testimonials/add", {
                 method: "POST",
                 body: JSON.stringify(data),
                 headers: { 'Content-Type': 'application/json' }
@@ -41,7 +43,7 @@ export default function Form({ toggleForm, setShouldUpdate }) {
             // console.log("file", file)
 
             try {
-                await fetch("/upload", {
+                await fetch(BACKEND_URL + "/upload", {
                     method: "POST",
                     body: data,
                     // headers: { 'Content-Type': 'multipart/form-data' }
