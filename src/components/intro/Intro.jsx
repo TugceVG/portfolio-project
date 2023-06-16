@@ -54,7 +54,7 @@ export default function Intro() {
                             <span className="detailText">You can explore my projects and find more details by visiting my GitHub address.</span>
                         </div>
                         <div className="detail">
-                            <a href='assets/TugceVG.pdf' download><SimCardDownloadIcon className="detailIcon">CV</SimCardDownloadIcon></a>
+                            <a href='assets/TugceVGresume(En).pdf' download><SimCardDownloadIcon className="detailIcon">CV</SimCardDownloadIcon></a>
                             <span className="detailText">Download my CV as PDF</span>
                         </div>
                     </div>
