@@ -12,6 +12,10 @@
         flex: 1;
         overflow: hidden;
 
+        @include mobile {
+            flex: unset;
+        }
+
         img {
             height: 100%;
         }
