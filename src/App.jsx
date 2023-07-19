@@ -13,7 +13,7 @@ function App() {
   const sideBar = [
     { title: "Home", id: "#intro" },
     { title: "Portfolio", id: "#portfolio" },
-    { title: "Works", id: "#works" },
+    { title: "Certificates", id: "#works" },
     { title: "Testimonials", id: "#testimonials" },
     { title: "Contact", id: "#contact" }
   ]

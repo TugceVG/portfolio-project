@@ -3,9 +3,10 @@ import PortfolioList from "../portfolioList/PortfolioList";
 import "./portfolio.scss";
 import { featuredPortfolio, webPortfolio, mobilePortfolio, designPortfolio, contentPortfolio } from "../../data";
 
+const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+
 export default function Portfolio() {
 
-    const PF = process.env.REACT_APP_PUBLIC_FOLDER;
     const [selected, setSelected] = useState("featured");
     const [data, setData] = useState([]);
     const list = [
@@ -17,18 +18,18 @@ export default function Portfolio() {
             id: "web",
             title: "Web App"
         },
-        {
-            id: "mobile",
-            title: "Mobile App"
-        },
+        // {
+        //     id: "mobile",
+        //     title: "Mobile App"
+        // },
         {
             id: "design",
             title: "Design"
         },
-        {
-            id: "branding",
-            title: "Branding"
-        }
+        // {
+        //     id: "branding",
+        //     title: "Branding"
+        // }
     ];
 
     useEffect(() => {
@@ -73,7 +74,8 @@ export default function Portfolio() {
                 {data.map((item) => (
                     <div key={item.id} className="item">
                         {/* <img src={item.img} alt="" /> */}
-                        <img src={PF + "under_construction.png"} alt="" />
+                        {/* <img src={PF + "under_construction.png"} alt="" /> */}
+                        <img src={PF + item.img} alt="" />
                         <h3>{item.title}</h3>
                     </div>))}
             </div>
