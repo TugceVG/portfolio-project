@@ -30,7 +30,7 @@ export default function Works() {
       title: "ReactJS",
       desc: "I have achieved a certificate from BTK Akademi. During the program, I built several projects, which I have linked below. If you want to check them out, you can click on the projects link.",
       img: "https://i.pinimg.com/originals/a9/f6/94/a9f69465d972a004ad581f245d6ad581.jpg",
-      picture: "./assets/react-BTK.png",
+      picture: "React-BTK.png",
       link: "https://github.com/TugceVG/playground-reactjs",
     },
   ];
