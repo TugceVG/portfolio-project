@@ -42,14 +42,14 @@ export default function Intro() {
           <div className="wrapperDetails">
             <h4>Additionally,</h4>
             <hr />
-            <div className="detail">
+            {/* <div className="detail">
               <a href="assets/TugceVGresume(En).pdf" download>
                 <SimCardDownloadIcon className="detailIcon">
                   CV
                 </SimCardDownloadIcon>
               </a>
               <span className="detailText">Download my CV as PDF</span>
-            </div>
+            </div> */}
 
             <div className="detail">
               <a
