@@ -37,7 +37,7 @@ export default function Intro() {
           <h2>Hi There I'm</h2>
           <h1>Tugce Vatansever Gunduz</h1>
           <h3>
-            Junior <span ref={textRef} /> <span>Developer</span>
+            <span ref={textRef} /> <span>Developer</span>
           </h3>
           <div className="wrapperDetails">
             <h4>Additionally,</h4>
